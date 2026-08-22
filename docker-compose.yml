@@ -1,0 +1,25 @@
+services:
+  train:
+    build: .
+    container_name: dqn-train
+    volumes:
+      - ./models:/app/models
+      - ./results:/app/results
+    command: python -m src.train --episodes 10000
+
+  evaluate:
+    build: .
+    container_name: dqn-evaluate
+    volumes:
+      - ./models:/app/models
+      - ./results:/app/results
+    command: python -m src.evaluate --games 1000
+
+  play-cli:
+    build: .
+    container_name: dqn-play-cli
+    volumes:
+      - ./models:/app/models
+    stdin_open: true
+    tty: true
+    command: python -m src.game --cli

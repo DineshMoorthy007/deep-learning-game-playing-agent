@@ -1,0 +1,5 @@
+Agent,Opponent,Total Games,Wins,Draws,Losses,Win Rate (%),Draw Rate (%),Loss Rate (%)
+Untrained Baseline,Random Opponent,1000,484,83,433,48.40,8.30,43.30
+Untrained Baseline,Strategic Opponent,1000,166,245,589,16.60,24.50,58.90
+Trained DQN Agent,Random Opponent,1000,903,65,32,90.30,6.50,3.20
+Trained DQN Agent,Strategic Opponent,1000,500,500,0,50.00,50.00,0.00
