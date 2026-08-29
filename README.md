@@ -21,6 +21,7 @@ An autonomous game-playing agent trained to master Tic-Tac-Toe using Deep Q-Netw
 - [Exploration vs Exploitation](#exploration-vs-exploitation)
 - [Experience Replay](#experience-replay)
 - [Project Structure](#project-structure)
+- [Jupyter Notebook & Google Colab](#jupyter-notebook--google-colab)
 - [Installation and Setup](#installation-and-setup)
 - [Running the Project](#running-the-project)
 - [Training the Agent](#training-the-agent)
@@ -420,6 +421,9 @@ deep-learning-game-playing-agent/
 │   ├── game.py              # Advanced Pygame GUI and CLI human vs AI gameplay interface
 │   └── utils.py             # Plotting utilities, seed initialization, CSV export
 │
+├── notebooks/
+│   └── deep_learning_game_playing_agent.ipynb # Self-contained Google Colab & Jupyter notebook
+│
 ├── tests/
 │   ├── test_environment.py  # Unit tests for board mechanics and win conditions
 │   └── test_model_and_agent.py # Unit tests for DQN architecture and replay memory
@@ -445,6 +449,23 @@ deep-learning-game-playing-agent/
 ├── .gitignore               # Files and patterns ignored by version control
 └── LICENSE                  # MIT open-source license file
 ```
+
+---
+
+## Jupyter Notebook & Google Colab
+
+For interactive cloud execution without local environment setup, a self-contained notebook is available in [`notebooks/deep_learning_game_playing_agent.ipynb`](notebooks/deep_learning_game_playing_agent.ipynb).
+
+### Notebook Highlights
+- **Zero Local Configuration**: Runs end-to-end in the cloud using free Google Colab CPU or GPU runtimes.
+- **Interactive Step-by-Step Flow**: Includes environment simulation, MLP model definition, DQN agent training, convergence plots, and benchmark evaluations.
+- **In-Notebook Interactive Match**: Play against the trained agent with live, printed Q-value predictions for each board move.
+- **Checkpoint Exporter**: Directly download the trained `.keras` neural network model from Colab.
+
+### Running on Google Colab
+1. Navigate to [Google Colab](https://colab.research.google.com/).
+2. Select **Upload** and choose `notebooks/deep_learning_game_playing_agent.ipynb`.
+3. Click **Runtime $\to$ Run all** (or step through cells sequentially).
 
 ---
 
@@ -498,6 +519,7 @@ The project provides dedicated entry points for training, evaluation, and intera
 | `python -m src.evaluate` | Run quantitative benchmarking against baseline opponents |
 | `python -m src.game` | Launch the modern Pygame GUI with live Q-value visualizer |
 | `python -m src.game --cli` | Play an interactive match directly in the terminal |
+| `jupyter notebook notebooks/deep_learning_game_playing_agent.ipynb` | Launch interactive Jupyter notebook |
 | `python tests/test_environment.py` | Run environment unit test suite |
 | `python tests/test_model_and_agent.py` | Run neural network model and agent test suite |
 
